@@ -9,14 +9,14 @@
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:'Inter',system-ui,sans-serif;background:#F2F1ED;min-height:100vh}
 
-.hdr{background:#FF6900;padding:24px 40px 20px}
+.hdr{background:#FF6900;padding:20px clamp(16px,5vw,40px) 18px;text-align:center}
 .hdr-pre{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:6px}
-.hdr-title{font-size:32px;font-weight:900;color:#fff;letter-spacing:-.5px;line-height:1.05;margin-bottom:18px}
-.hdr-stats{display:flex;gap:40px}
-.hdr-stat-v{font-size:36px;font-weight:900;color:#fff;letter-spacing:-1.5px;line-height:1}
+.hdr-title{font-size:clamp(22px,6vw,32px);font-weight:900;color:#fff;letter-spacing:-.5px;line-height:1.05;margin-bottom:14px}
+.hdr-stats{display:flex;gap:40px;justify-content:center}
+.hdr-stat-v{font-size:clamp(24px,7vw,36px);font-weight:900;color:#fff;letter-spacing:-1.5px;line-height:1}
 .hdr-stat-l{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:rgba(255,255,255,.6);margin-top:4px}
 
-.body{max-width:680px;margin:0 auto;padding:28px 24px 48px}
+.body{max-width:680px;margin:0 auto;padding:20px clamp(12px,4vw,24px) 48px}
 
 .steps{display:flex;align-items:center;gap:0;margin-bottom:24px}
 .step{display:flex;align-items:center;gap:8px}
@@ -36,7 +36,7 @@ body{font-family:'Inter',system-ui,sans-serif;background:#F2F1ED;min-height:100v
 .back-btn:hover{text-decoration:underline}
 .back-btn svg{width:16px;height:16px;stroke:#FF6900;stroke-width:2.5;fill:none}
 
-.step-card{background:#fff;border-radius:20px;padding:24px 28px;box-shadow:0 4px 20px rgba(0,0,0,.06)}
+.step-card{background:#fff;border-radius:20px;padding:clamp(16px,4vw,24px) clamp(16px,5vw,28px);box-shadow:0 4px 20px rgba(0,0,0,.06)}
 .step-card-lbl{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#C4C8CF;margin-bottom:5px}
 .step-card-title{font-size:22px;font-weight:800;color:#1A1F27;margin-bottom:18px}
 
@@ -62,19 +62,20 @@ body{font-family:'Inter',system-ui,sans-serif;background:#F2F1ED;min-height:100v
 .empty{font-size:14px;color:#C4C8CF;padding:20px;text-align:center}
 
 /* ── ГЕРОЙ — новая структура ── */
-.hero{background:#1A1F27;border-radius:20px;padding:28px 32px;position:relative;overflow:hidden;margin-bottom:14px}
+.hero{background:#1A1F27;border-radius:20px;padding:clamp(18px,5vw,28px) clamp(16px,5vw,32px);position:relative;overflow:hidden;margin-bottom:14px}
 .hero::after{content:'';position:absolute;top:-60px;right:-60px;width:200px;height:200px;border-radius:50%;background:rgba(255,105,0,.08);pointer-events:none}
-.hero-rest{font-size:15px;font-weight:700;color:rgba(255,255,255,.45);margin-bottom:6px}
-.hero-loss-l{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.35);margin-bottom:6px}
-.hero-loss-v{font-size:64px;font-weight:900;color:#FF6900;letter-spacing:-2px;line-height:1;font-variant-numeric:tabular-nums}
-.hero-loss-s{font-size:13px;color:rgba(255,255,255,.3);margin-top:5px;margin-bottom:24px}
-.hero-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.hero-rest{font-size:15px;font-weight:700;color:rgba(255,255,255,.7);margin-bottom:6px}
+.hero-loss-l{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.55);margin-bottom:6px}
+.hero-loss-v{font-size:clamp(36px,10vw,64px);font-weight:900;color:#FF6900;letter-spacing:-2px;line-height:1;font-variant-numeric:tabular-nums;white-space:nowrap}
+.hero-loss-s{font-size:13px;color:rgba(255,255,255,.55);margin-top:5px;margin-bottom:20px}
+.hero-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+@media(min-width:500px){.hero-grid{grid-template-columns:repeat(4,1fr)}}
 .hs{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:14px 16px}
 .hs.acc{background:rgba(255,105,0,.13);border-color:rgba(255,105,0,.3)}
-.hs-l{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:rgba(255,255,255,.28);margin-bottom:5px}
+.hs-l{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:rgba(255,255,255,.55);margin-bottom:5px}
 .hs-v{font-size:22px;font-weight:800;color:#fff;line-height:1}
 .hs.acc .hs-v{color:#FF6900}
-.hs-s{font-size:11px;color:rgba(255,255,255,.22);margin-top:3px}
+.hs-s{font-size:11px;color:rgba(255,255,255,.45);margin-top:3px}
 
 /* ── БАННЕР ── */
 .bnr{border-radius:16px;padding:18px 22px;display:flex;gap:14px;margin-bottom:14px}
