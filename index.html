@@ -9,7 +9,6 @@
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:'Inter',system-ui,sans-serif;background:#F2F1ED;min-height:100vh}
 
-/* ── ШАПКА ── */
 .hdr{background:#FF6900;padding:24px 40px 20px}
 .hdr-pre{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:6px}
 .hdr-title{font-size:32px;font-weight:900;color:#fff;letter-spacing:-.5px;line-height:1.05;margin-bottom:18px}
@@ -17,10 +16,8 @@ body{font-family:'Inter',system-ui,sans-serif;background:#F2F1ED;min-height:100v
 .hdr-stat-v{font-size:36px;font-weight:900;color:#fff;letter-spacing:-1.5px;line-height:1}
 .hdr-stat-l{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:rgba(255,255,255,.6);margin-top:4px}
 
-/* ── ТЕЛО ── */
 .body{max-width:680px;margin:0 auto;padding:28px 24px 48px}
 
-/* ── ИНДИКАТОР ШАГОВ ── */
 .steps{display:flex;align-items:center;gap:0;margin-bottom:24px}
 .step{display:flex;align-items:center;gap:8px}
 .step-circle{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;flex-shrink:0;transition:all .2s}
@@ -35,46 +32,25 @@ body{font-family:'Inter',system-ui,sans-serif;background:#F2F1ED;min-height:100v
 .step-line.done{background:#E0F5EC}
 .step-line.future{background:#E8E8E0}
 
-/* ── КНОПКА НАЗАД ── */
-.back-btn{
-  display:none;align-items:center;gap:6px;
-  background:none;border:none;cursor:pointer;
-  font-size:14px;font-weight:700;color:#FF6900;
-  padding:0;margin-bottom:16px;
-}
+.back-btn{display:none;align-items:center;gap:6px;background:none;border:none;cursor:pointer;font-size:14px;font-weight:700;color:#FF6900;padding:0;margin-bottom:16px}
 .back-btn:hover{text-decoration:underline}
 .back-btn svg{width:16px;height:16px;stroke:#FF6900;stroke-width:2.5;fill:none}
 
-/* ── КАРТОЧКА ШАГА ── */
 .step-card{background:#fff;border-radius:20px;padding:24px 28px;box-shadow:0 4px 20px rgba(0,0,0,.06)}
 .step-card-lbl{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#C4C8CF;margin-bottom:5px}
 .step-card-title{font-size:22px;font-weight:800;color:#1A1F27;margin-bottom:18px}
 
-/* ── ПОИСК ── */
 .srch{position:relative;margin-bottom:14px}
-.srch input{
-  width:100%;font-size:18px;font-weight:500;
-  padding:16px 16px 16px 52px;
-  border:1.5px solid #E6E8EB;border-radius:14px;
-  background:#F8F7F3;color:#1A1F27;outline:none;
-  transition:border-color .15s,box-shadow .15s;
-}
+.srch input{width:100%;font-size:18px;font-weight:500;padding:16px 16px 16px 52px;border:1.5px solid #E6E8EB;border-radius:14px;background:#F8F7F3;color:#1A1F27;outline:none;transition:border-color .15s,box-shadow .15s}
 .srch input:focus{border-color:#FF6900;background:#fff;box-shadow:0 0 0 3px rgba(255,105,0,.1)}
 .srch input::placeholder{color:#C4C8CF}
 .srch svg{position:absolute;left:16px;top:50%;transform:translateY(-50%);width:22px;height:22px;stroke:#C4C8CF;fill:none;pointer-events:none}
 
-/* ── СПИСОК ── */
 .list{display:flex;flex-direction:column;gap:6px;max-height:400px;overflow-y:auto;scrollbar-width:thin;scrollbar-color:#E6E8EB transparent}
 .list::-webkit-scrollbar{width:4px}
 .list::-webkit-scrollbar-thumb{background:#E6E8EB;border-radius:4px}
 
-.li{
-  padding:14px 18px;border-radius:12px;
-  border:1.5px solid #E6E8EB;background:#F8F7F3;
-  cursor:pointer;transition:all .1s;
-  display:flex;align-items:center;gap:12px;
-  flex-shrink:0;user-select:none;
-}
+.li{padding:14px 18px;border-radius:12px;border:1.5px solid #E6E8EB;background:#F8F7F3;cursor:pointer;transition:all .1s;display:flex;align-items:center;gap:12px;flex-shrink:0;user-select:none}
 .li:hover{border-color:#FF6900;background:#FFF5EE}
 .li.sel{border-color:#FF6900;background:#FF6900;color:#fff}
 .li-dot{width:9px;height:9px;border-radius:50%;flex-shrink:0}
@@ -83,17 +59,15 @@ body{font-family:'Inter',system-ui,sans-serif;background:#F2F1ED;min-height:100v
 .li-right{font-size:14px;font-weight:800;flex-shrink:0}
 .li-sub{font-size:12px;opacity:.5;flex-shrink:0}
 .li.sel .li-right,.li.sel .li-sub{color:#fff;opacity:.85}
-
 .empty{font-size:14px;color:#C4C8CF;padding:20px;text-align:center}
 
-/* ── РЕЗУЛЬТАТ ── */
+/* ── ГЕРОЙ — новая структура ── */
 .hero{background:#1A1F27;border-radius:20px;padding:28px 32px;position:relative;overflow:hidden;margin-bottom:14px}
 .hero::after{content:'';position:absolute;top:-60px;right:-60px;width:200px;height:200px;border-radius:50%;background:rgba(255,105,0,.08);pointer-events:none}
-.hero-pre{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:rgba(255,255,255,.3);margin-bottom:6px}
-.hero-rest{font-size:18px;font-weight:700;color:rgba(255,255,255,.6);margin-bottom:22px;line-height:1.4}
-.hero-loss-l{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.3);margin-bottom:8px}
+.hero-rest{font-size:15px;font-weight:700;color:rgba(255,255,255,.45);margin-bottom:6px}
+.hero-loss-l{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.35);margin-bottom:6px}
 .hero-loss-v{font-size:64px;font-weight:900;color:#FF6900;letter-spacing:-2px;line-height:1;font-variant-numeric:tabular-nums}
-.hero-loss-s{font-size:14px;color:rgba(255,255,255,.35);margin-top:6px;margin-bottom:24px}
+.hero-loss-s{font-size:13px;color:rgba(255,255,255,.3);margin-top:5px;margin-bottom:24px}
 .hero-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
 .hs{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:14px 16px}
 .hs.acc{background:rgba(255,105,0,.13);border-color:rgba(255,105,0,.3)}
@@ -108,27 +82,25 @@ body{font-family:'Inter',system-ui,sans-serif;background:#F2F1ED;min-height:100v
 .bnr-t{font-size:17px;font-weight:800;margin-bottom:4px}
 .bnr-s{font-size:13px;line-height:1.55;opacity:.85}
 
-/* ── СЦЕНАРИИ ── */
+/* ── СЦЕНАРИИ — серые, только достигнутые зелёные ── */
 .sc-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#8A929E;margin-bottom:12px}
 .sc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:24px}
 .sc{border-radius:16px;border:1.5px solid #E6E8EB;padding:18px 16px;background:#fff;display:flex;flex-direction:column;gap:5px}
 .sc.done{border-color:#A8D5BA;background:#F0FAF4}
-.sc.best{border-color:#FF6900;box-shadow:0 4px 16px rgba(255,105,0,.12)}
-.sc-pct{font-size:40px;font-weight:900;letter-spacing:-1.5px;line-height:1}
+/* убираем цветные акценты у недостигнутых — всё серое */
+.sc-pct{font-size:40px;font-weight:900;letter-spacing:-1.5px;line-height:1;color:#1A1F27}
+.sc.done .sc-pct{color:#1F9D6B}
 .sc-tag{font-size:11px;font-weight:700;text-transform:uppercase;color:#8A929E;margin-top:2px}
-.sc-val{font-size:20px;font-weight:800;line-height:1.1;margin-top:4px}
+.sc-val{font-size:20px;font-weight:800;line-height:1.1;margin-top:4px;color:#1A1F27}
+.sc.done .sc-val{color:#1F9D6B}
 .sc-sub{font-size:12px;color:#8A929E}
+/* рамка для "цели" — тонкий оранжевый без заливки */
+.sc.target{border-color:#FF6900;border-width:2px}
+.sc.target .sc-pct{color:#FF6900}
+.sc.target .sc-val{color:#FF6900}
 
-/* ── КНОПКА СБРОСА ── */
-.reset-btn{
-  width:100%;padding:16px;
-  background:#F8F7F3;border:1.5px solid #E6E8EB;
-  border-radius:14px;cursor:pointer;
-  font-size:15px;font-weight:700;color:#8A929E;
-  transition:all .15s;display:none;
-}
+.reset-btn{width:100%;padding:16px;background:#F8F7F3;border:1.5px solid #E6E8EB;border-radius:14px;cursor:pointer;font-size:15px;font-weight:700;color:#8A929E;transition:all .15s;display:none}
 .reset-btn:hover{border-color:#FF6900;color:#FF6900;background:#FFF5EE}
-
 .fn{font-size:12px;color:#C4C8CF;text-align:center;margin-top:16px}
 </style>
 </head>
@@ -145,7 +117,6 @@ body{font-family:'Inter',system-ui,sans-serif;background:#F2F1ED;min-height:100v
 
 <div class="body">
 
-  <!-- ИНДИКАТОР ШАГОВ -->
   <div class="steps" id="steps">
     <div class="step">
       <div class="step-circle active" id="sc1">1</div>
@@ -158,7 +129,6 @@ body{font-family:'Inter',system-ui,sans-serif;background:#F2F1ED;min-height:100v
     </div>
   </div>
 
-  <!-- ШАГ 1: ГОРОД -->
   <div id="s1">
     <div class="step-card">
       <div class="step-card-lbl">Шаг 1 из 2</div>
@@ -171,7 +141,6 @@ body{font-family:'Inter',system-ui,sans-serif;background:#F2F1ED;min-height:100v
     </div>
   </div>
 
-  <!-- ШАГ 2: РЕСТОРАН -->
   <div id="s2" style="display:none">
     <button class="back-btn" id="back-s2" onclick="goStep1()">
       <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
@@ -188,7 +157,6 @@ body{font-family:'Inter',system-ui,sans-serif;background:#F2F1ED;min-height:100v
     </div>
   </div>
 
-  <!-- РЕЗУЛЬТАТ -->
   <div id="result" style="display:none;margin-top:20px">
     <button class="back-btn" id="back-result" onclick="goStep2()">
       <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
@@ -196,9 +164,8 @@ body{font-family:'Inter',system-ui,sans-serif;background:#F2F1ED;min-height:100v
     </button>
 
     <div class="hero">
-      <div class="hero-pre">Потенциал роста выручки</div>
       <div class="hero-rest" id="h-rest"></div>
-      <div class="hero-loss-l">Упущенная выручка в месяц</div>
+      <div class="hero-loss-l" id="h-loss-l">Потенциал роста выручки</div>
       <div class="hero-loss-v" id="h-loss"></div>
       <div class="hero-loss-s" id="h-loss-s"></div>
       <div class="hero-grid">
@@ -233,17 +200,14 @@ function fmt(n){
 }
 
 function setStep(step){
-  const s={1:{c1:'active',l1:'active',c2:'future',l2:'future',line:'future'},
-           2:{c1:'done',l1:'done',c2:'active',l2:'active',line:'done'}}[step];
-  document.getElementById('sc1').className='step-circle '+s.c1;
+  document.getElementById('sc1').className='step-circle '+(step>1?'done':'active');
   document.getElementById('sc1').textContent=step>1?'✓':'1';
-  document.getElementById('sl1').className='step-label '+s.l1;
-  document.getElementById('sc2').className='step-circle '+s.c2;
-  document.getElementById('sl2').className='step-label '+s.l2;
-  document.getElementById('line1').className='step-line '+s.line;
+  document.getElementById('sl1').className='step-label '+(step>1?'done':'active');
+  document.getElementById('sc2').className='step-circle '+(step>=2?'active':'future');
+  document.getElementById('sl2').className='step-label '+(step>=2?'active':'future');
+  document.getElementById('line1').className='step-line '+(step>1?'done':'future');
 }
 
-// ── ШАГ 1: ГОРОДА ──
 function filterCities(q){
   const el=document.getElementById('city-list'); el.innerHTML='';
   const hits=D.filter(c=>c.name.toLowerCase().includes(q.toLowerCase())).slice(0,80);
@@ -267,12 +231,10 @@ function selectCity(city){
   document.getElementById('result').style.display='none';
   document.getElementById('rest-title').textContent=city.name;
   document.getElementById('rest-search').value='';
-  setStep(2);
-  filterRests('');
+  setStep(2); filterRests('');
   window.scrollTo({top:0,behavior:'smooth'});
 }
 
-// ── ШАГ 2: РЕСТОРАНЫ ──
 function filterRests(q){
   const el=document.getElementById('rest-list'); el.innerHTML='';
   const hits=curRests.filter(r=>r.r.toLowerCase().includes(q.toLowerCase())).slice(0,50);
@@ -286,22 +248,24 @@ function filterRests(q){
   });
 }
 
-// ── РЕЗУЛЬТАТ ──
+// Новые тексты по стикерам от копирайтеров
 const BN={
-  verylow:{bg:"#FFF5EE",bc:"#FF6900",ico:"😬",t:"Честно — есть куда расти!",s:"Доля ниже среднего по сети. Огромный потенциал — смотри цифры ниже."},
-  low:    {bg:"#FFF5EE",bc:"#FF6900",ico:"🤔",t:"Пока ниже среднего, но поправимо",s:"Разрыв реальный. Чуть больше фокуса — и картина изменится."},
-  mid:    {bg:"#FFF5EE",bc:"#FF6900",ico:"👊",t:"Выше среднего — красавчик!",s:"Ты уже обогнал большинство. Следующий уровень — 60%."},
-  good:   {bg:"#FFF5EE",bc:"#FF6900",ico:"🔥",t:"Топ-треть сети! Огонь!",s:"Ещё немного — и войдёшь в абсолютный топ."},
-  high:   {bg:"#E7F6EF",bc:"#1F9D6B",ico:"🏅",t:"Топ сети — не просто слова",s:"На тебя смотрят и копируют. Ты обогнал 80% партнёров."},
-  top:    {bg:"#E7F6EF",bc:"#1F9D6B",ico:"🏆",t:"Чемпион. Серьёзно.",s:"Лучший результат в сети."},
+  verylow:{bg:"#FFF5EE",bc:"#FF6900",ico:"😬",t:"Потенциал для роста обнаружен!",s:"Обсудите в команде и соберите идеи как увеличить долю заказов через киоск."},
+  low:    {bg:"#FFF5EE",bc:"#FF6900",ico:"🤔",t:"Потенциал для роста обнаружен!",s:"Обсудите в команде и соберите идеи как увеличить долю заказов через киоск."},
+  mid:    {bg:"#FFF5EE",bc:"#FF6900",ico:"👊",t:"Хорошая работа!",s:"Что сейчас мешает гостям делать заказы через киоск? Обсудите в команде и соберите идеи как увеличить долю заказов."},
+  good:   {bg:"#FFF5EE",bc:"#FF6900",ico:"🔥",t:"Хорошая работа!",s:"Половина гостей уже делает заказ через киоск. Дальше — больше!"},
+  high:   {bg:"#E7F6EF",bc:"#1F9D6B",ico:"🏅",t:"Один из лучших показателей в сети",s:"Ваша пиццерия в топе по заказам через киоск."},
+  top:    {bg:"#E7F6EF",bc:"#1F9D6B",ico:"🏆",t:"Один из лучших показателей в сети",s:"Ваша пиццерия в топе по заказам через киоск."},
 };
-const SC=[{p:40,col:"#1F9D6B"},{p:60,col:"#FF6900",best:true},{p:80,col:"#635BFF"}];
+
+const SC=[{p:40},{p:60,target:true},{p:80}];
 
 function selectRest(r){
   const s=r.s;
   const maxU=[...r.u].reverse().find(x=>x>0)||0;
   const maxT=maxU===r.u[2]?80:maxU===r.u[1]?60:40;
 
+  // Герой — убрали "Упущенная выручка в месяц", лейбл теперь сверху цифры
   document.getElementById('h-rest').textContent=r.r+(curCity?' · '+curCity.name:'');
   document.getElementById('h-loss').textContent=maxU>0?'+'+fmt(maxU):'Топ сети 🏆';
   document.getElementById('h-loss-s').textContent=maxU>0?'при выходе на '+maxT+'% заказов через киоск':'все уровни роста достигнуты';
@@ -316,14 +280,27 @@ function selectRest(r){
   bnr.style.cssText=`display:flex;gap:14px;border-radius:16px;padding:18px 22px;margin-bottom:14px;border-left:5px solid ${b.bc};background:${b.bg}`;
   bnr.innerHTML=`<div class="bnr-ico">${b.ico}</div><div><div class="bnr-t">${b.t}</div><div class="bnr-s">${b.s}</div></div>`;
 
+  // Сценарии: серые по умолчанию, зелёные если done, оранжевая рамка для цели
   let html='';
   SC.forEach((c,i)=>{
     const done=c.p<=s, ul=r.u[i];
+    // Находим первый недостигнутый — это цель
+    const isTarget=c.target && !done;
     if(done){
-      html+=`<div class="sc done"><div class="sc-pct" style="color:#1F9D6B">${c.p}%</div><div class="sc-tag">Уровень ${i+1}</div><div class="sc-val" style="color:#1F9D6B">Уже достигнуто</div><div style="font-size:20px;margin-top:4px">✓</div></div>`;
+      html+=`<div class="sc done">
+        <div class="sc-pct">${c.p}%</div>
+        <div class="sc-tag">Уровень ${i+1}</div>
+        <div class="sc-val">Уже достигнуто</div>
+        <div style="font-size:20px;margin-top:4px;color:#1F9D6B">✓</div>
+      </div>`;
     }else{
       const pg=r.v>0?((ul/r.v)*100).toFixed(1).replace('.',','):'—';
-      html+=`<div class="sc${c.best?' best':''}"><div class="sc-pct" style="color:${c.col}">${c.p}%</div><div class="sc-tag">Уровень ${i+1}${c.best?' · цель':''}</div><div class="sc-val" style="color:${c.col}">+${fmt(ul)}</div><div class="sc-sub">в месяц · +${pg}%</div></div>`;
+      html+=`<div class="sc${isTarget?' target':''}">
+        <div class="sc-pct">${c.p}%</div>
+        <div class="sc-tag">Уровень ${i+1}${isTarget?' · цель':''}</div>
+        <div class="sc-val">+${fmt(ul)}</div>
+        <div class="sc-sub">в месяц · +${pg}%</div>
+      </div>`;
     }
   });
   document.getElementById('sc-grid').innerHTML=html;
@@ -333,7 +310,6 @@ function selectRest(r){
   setTimeout(()=>document.getElementById('result').scrollIntoView({behavior:'smooth',block:'start'}),80);
 }
 
-// ── НАВИГАЦИЯ ──
 function goStep1(){
   document.getElementById('s2').style.display='none';
   document.getElementById('result').style.display='none';
@@ -342,7 +318,6 @@ function goStep1(){
   setStep(1);
   window.scrollTo({top:0,behavior:'smooth'});
 }
-
 function goStep2(){
   document.getElementById('result').style.display='none';
   document.getElementById('back-result').style.display='none';
@@ -350,7 +325,6 @@ function goStep2(){
   document.querySelectorAll('#rest-list .li').forEach(i=>i.classList.remove('sel'));
   window.scrollTo({top:0,behavior:'smooth'});
 }
-
 function resetAll(){
   curCity=null; curRests=[];
   document.getElementById('s1').style.display='block';
@@ -360,12 +334,10 @@ function resetAll(){
   document.getElementById('back-result').style.display='none';
   document.getElementById('reset-btn').style.display='none';
   document.getElementById('city-search').value='';
-  setStep(1);
-  filterCities('');
+  setStep(1); filterCities('');
   window.scrollTo({top:0,behavior:'smooth'});
 }
 
-// Инициализация
 filterCities('');
 </script>
 </body>
